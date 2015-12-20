@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iosMap02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-TH-RZh" userLabel="map">
+                                <rect key="frame" x="154" y="103" width="293" height="393"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8D-bZ-r2t">
+                                <rect key="frame" x="20" y="20" width="79" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="show sheet"/>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0g-ug-l1s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q9u-TH-RZh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="A4M-Om-Pa5"/>
+                            <constraint firstItem="y8D-bZ-r2t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="552" id="CX5-N3-ory"/>
+                            <constraint firstItem="Q9u-TH-RZh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DiW-fT-Ta3"/>
+                            <constraint firstItem="Q9u-TH-RZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LdH-hi-OUl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y8D-bZ-r2t" secondAttribute="bottom" constant="8" symbolic="YES" id="e3s-iJ-Yqa"/>
+                            <constraint firstItem="y8D-bZ-r2t" firstAttribute="centerX" secondItem="Q9u-TH-RZh" secondAttribute="centerX" id="hNw-IQ-IAB"/>
+                            <constraint firstItem="Q9u-TH-RZh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rbx-FB-bbC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="y8D-bZ-r2t"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LdH-hi-OUl"/>
+                                <exclude reference="rbx-FB-bbC"/>
+                                <exclude reference="e3s-iJ-Yqa"/>
+                                <exclude reference="CX5-N3-ory"/>
+                                <exclude reference="hNw-IQ-IAB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="y8D-bZ-r2t"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LdH-hi-OUl"/>
+                                <include reference="rbx-FB-bbC"/>
+                                <include reference="e3s-iJ-Yqa"/>
+                                <include reference="CX5-N3-ory"/>
+                                <include reference="hNw-IQ-IAB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="myMap" destination="Q9u-TH-RZh" id="z8c-pb-VK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="423"/>
+        </scene>
+    </scenes>
+</document>
