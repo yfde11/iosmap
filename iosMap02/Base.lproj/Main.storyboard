@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-TH-RZh" userLabel="map">
@@ -38,17 +39,19 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y8D-bZ-r2t" secondAttribute="bottom" constant="8" symbolic="YES" id="e3s-iJ-Yqa"/>
                             <constraint firstItem="y8D-bZ-r2t" firstAttribute="centerX" secondItem="Q9u-TH-RZh" secondAttribute="centerX" id="hNw-IQ-IAB"/>
                             <constraint firstItem="Q9u-TH-RZh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rbx-FB-bbC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y8D-bZ-r2t" secondAttribute="bottom" constant="8" symbolic="YES" id="ycB-RS-E9R"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="y8D-bZ-r2t"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CX5-N3-ory"/>
+                                <exclude reference="hNw-IQ-IAB"/>
                                 <exclude reference="LdH-hi-OUl"/>
                                 <exclude reference="rbx-FB-bbC"/>
                                 <exclude reference="e3s-iJ-Yqa"/>
-                                <exclude reference="CX5-N3-ory"/>
-                                <exclude reference="hNw-IQ-IAB"/>
+                                <exclude reference="ycB-RS-E9R"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -56,23 +59,93 @@
                                 <include reference="y8D-bZ-r2t"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CX5-N3-ory"/>
+                                <include reference="hNw-IQ-IAB"/>
                                 <include reference="LdH-hi-OUl"/>
                                 <include reference="rbx-FB-bbC"/>
-                                <include reference="e3s-iJ-Yqa"/>
-                                <include reference="CX5-N3-ory"/>
-                                <include reference="hNw-IQ-IAB"/>
+                                <exclude reference="e3s-iJ-Yqa"/>
+                                <include reference="ycB-RS-E9R"/>
                             </mask>
                         </variation>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="myMap" destination="Q9u-TH-RZh" id="z8c-pb-VK7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306" y="423"/>
+            <point key="canvasLocation" x="-843" y="220"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="f8h-dH-aX8">
+            <objects>
+                <viewController storyboardIdentifier="Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h29-MH-FzT" customClass="SettingViewController" customModule="iosMap02" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OCc-1t-qAy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ace-Ln-978"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQ8-LQ-yd2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRU-eI-dOd">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-3g-mbX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="92f-Ru-74m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rbg-3g-mbX" firstAttribute="centerX" secondItem="PQ8-LQ-yd2" secondAttribute="centerX" id="7NX-XF-Bpr"/>
+                            <constraint firstItem="lRU-eI-dOd" firstAttribute="centerX" secondItem="PQ8-LQ-yd2" secondAttribute="centerX" id="8WW-fm-Eca"/>
+                            <constraint firstItem="Rbg-3g-mbX" firstAttribute="bottom" secondItem="PQ8-LQ-yd2" secondAttribute="centerY" id="qw2-ve-ekD"/>
+                            <constraint firstItem="lRU-eI-dOd" firstAttribute="centerY" secondItem="PQ8-LQ-yd2" secondAttribute="centerY" id="rQ3-Ue-Fdo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lRU-eI-dOd"/>
+                                <exclude reference="Rbg-3g-mbX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7NX-XF-Bpr"/>
+                                <exclude reference="qw2-ve-ekD"/>
+                                <exclude reference="8WW-fm-Eca"/>
+                                <exclude reference="rQ3-Ue-Fdo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lRU-eI-dOd"/>
+                                <include reference="Rbg-3g-mbX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7NX-XF-Bpr"/>
+                                <include reference="qw2-ve-ekD"/>
+                                <include reference="8WW-fm-Eca"/>
+                                <include reference="rQ3-Ue-Fdo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Backbtn" destination="Rbg-3g-mbX" id="OwE-cd-uOS"/>
+                        <outlet property="tmpLabel" destination="lRU-eI-dOd" id="U8o-3z-7gE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrU-IJ-6w1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1528.5" y="244"/>
         </scene>
     </scenes>
 </document>

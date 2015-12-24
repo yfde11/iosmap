@@ -71,7 +71,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         let settingAction = UIAlertAction(title: "Setting", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
 
-//                self.presentViewController(SettingViewTableViewController(), animated: true, completion: nil)
+//            self.presentViewController(SettingViewController(), animated: true, completion: nil)
+                let vc = (self.storyboard?.instantiateViewControllerWithIdentifier("Setting"))! as UIViewController
+                self.showDetailViewController(vc, sender: self)
+            
         
         })
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43B69411C284F3000A4A662 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B69401C284F3000A4A662 /* SettingViewController.swift */; };
 		C4DAC5671C15E5B10098FA12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAC5661C15E5B10098FA12 /* AppDelegate.swift */; };
 		C4DAC5691C15E5B10098FA12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAC5681C15E5B10098FA12 /* ViewController.swift */; };
 		C4DAC56C1C15E5B10098FA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DAC56A1C15E5B10098FA12 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C43B69401C284F3000A4A662 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C4DAC5631C15E5B10098FA12 /* iosMap02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosMap02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DAC5661C15E5B10098FA12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DAC5681C15E5B10098FA12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				C4DAC5661C15E5B10098FA12 /* AppDelegate.swift */,
-				C4DAC5681C15E5B10098FA12 /* ViewController.swift */,
-				C4DAC56A1C15E5B10098FA12 /* Main.storyboard */,
 				C4DAC5701C15E5B10098FA12 /* Assets.xcassets */,
-				C4DAC5721C15E5B10098FA12 /* LaunchScreen.storyboard */,
 				C4DAC5751C15E5B10098FA12 /* Info.plist */,
 				C4DAC56D1C15E5B10098FA12 /* iosMap02.xcdatamodeld */,
+				C4DAC5721C15E5B10098FA12 /* LaunchScreen.storyboard */,
+				C4DAC56A1C15E5B10098FA12 /* Main.storyboard */,
+				C43B69401C284F3000A4A662 /* SettingViewController.swift */,
+				C4DAC5681C15E5B10098FA12 /* ViewController.swift */,
 			);
 			path = iosMap02;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				C4DAC56F1C15E5B10098FA12 /* iosMap02.xcdatamodeld in Sources */,
 				C4DAC5691C15E5B10098FA12 /* ViewController.swift in Sources */,
 				C4DAC5671C15E5B10098FA12 /* AppDelegate.swift in Sources */,
+				C43B69411C284F3000A4A662 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
